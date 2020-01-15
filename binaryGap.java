@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.*;
 
 class Solution {
     public int solution(int N) {
@@ -8,18 +9,14 @@ class Solution {
         char[] arr = binary.toCharArray();
         
         for(char ch : arr){
-        
             if(ch == '0'){
                 gapCount++;
-            }
-            
-            if(ch == '1'){
+            } else {
                 if(gapCount > binGap){
                     binGap = gapCount;
                 }
                 gapCount = 0;
             }
-            
         }
     
         return binGap;
